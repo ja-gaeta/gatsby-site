@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const getTours = graphql`
   query {
-    tours: allContentfulTour(filter: { featured: { eq: true } }) {
+    tours: allContentfulTour {
       edges {
         node {
           name
@@ -15,7 +15,7 @@ const getTours = graphql`
           days
           images {
             fluid {
-              src
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }
