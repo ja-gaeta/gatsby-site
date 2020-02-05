@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import { FaMoneyBillWave, FaMap } from "react-icons/fa"
 import Day from "../components/SingleTour/Day"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import SEO from "../components/SEO"
 
 const Template = ({ data }) => {
   const {
@@ -22,8 +23,18 @@ const Template = ({ data }) => {
 
   const [mainImage, ...tourImages] = images
 
+  const capitalize = str => {
+    let pieces = str.split(" ")
+    for (let i = 0; i < pieces.length; i++) {
+      let j = pieces[i].charAt(0).toUpperCase()
+      pieces[i] = j + pieces[i].substr(1)
+    }
+    return pieces.join(" ")
+  }
+
   return (
     <Layout>
+      <SEO title={capitalize(name)} />
       <StyledHero img={mainImage.fluid} />
       <section className={styles.template}>
         <div className={styles.center}>

@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import styles from "../css/single-blog.module.css"
 import AniLink from "gatsby-plugin-transition-link"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import SEO from "../components/SEO"
 
 const Blog = ({ data }) => {
   const {
@@ -46,8 +47,19 @@ const Blog = ({ data }) => {
       },
     },
   }
+
+  const capitalize = str => {
+    let pieces = str.split(" ")
+    for (let i = 0; i < pieces.length; i++) {
+      let j = pieces[i].charAt(0).toUpperCase()
+      pieces[i] = j + pieces[i].substr(1)
+    }
+    return pieces.join(" ")
+  }
+
   return (
     <Layout>
+      <SEO title={capitalize(title)} />
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1>{title}</h1>
