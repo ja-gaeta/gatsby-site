@@ -1,11 +1,11 @@
 export default [
   {
     path: "/",
-    text: "home",
+    text: "início",
   },
   {
     path: "/tours",
-    text: "tours",
+    text: "crônicas",
   },
   {
     path: "/blog",
@@ -13,10 +13,10 @@ export default [
   },
   {
     path: "/blogs",
-    text: "blogs",
+    text: "vídeos",
   },
   {
     path: "/contact",
-    text: "contact",
+    text: "contato",
   },
 ]
