@@ -59,28 +59,28 @@ const Blog = props => {
   )
 }
 
-export const query = graphql`
-  query getPosts($skip: Int!, $limit: Int!) {
-    posts: allContentfulPost(
-      skip: $skip
-      limit: $limit
-      sort: { fields: published, order: DESC }
-    ) {
-      edges {
-        node {
-          slug
-          title
-          _id: contentful_id
-          published(formatString: "MMMM Do, YYYY")
-          image {
-            fluid {
-              ...GatsbyContentfulFluid_withWebp
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query getPosts($skip: Int!, $limit: Int!) {
+//     posts: allContentfulPost(
+//       skip: $skip
+//       limit: $limit
+//       sort: { fields: published, order: DESC }
+//     ) {
+//       edges {
+//         node {
+//           slug
+//           title
+//           _id: contentful_id
+//           published(formatString: "MMMM Do, YYYY")
+//           image {
+//             fluid {
+//               ...GatsbyContentfulFluid_withWebp
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Blog

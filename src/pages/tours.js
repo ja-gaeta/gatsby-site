@@ -10,8 +10,8 @@ export default class tours extends Component {
     return (
       <Layout>
         <SEO title="Cursos" />
-        {/* <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} />
-        <Tours /> */}
+        {/* <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} /> */}
+        <Tours />
         Cursos
       </Layout>
     )

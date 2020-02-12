@@ -79,28 +79,28 @@ const Template = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    tour: contentfulTour(slug: { eq: $slug }) {
-      name
-      price
-      country
-      days
-      start(formatString: "dddd MMMM Do, YYYY")
-      description {
-        description
-      }
-      journey {
-        day
-        info
-      }
-      images {
-        fluid {
-          ...GatsbyContentfulFluid_withWebp
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query($slug: String!) {
+//     tour: contentfulTour(slug: { eq: $slug }) {
+//       name
+//       price
+//       country
+//       days
+//       start(formatString: "dddd MMMM Do, YYYY")
+//       description {
+//         description
+//       }
+//       journey {
+//         day
+//         info
+//       }
+//       images {
+//         fluid {
+//           ...GatsbyContentfulFluid_withWebp
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Template

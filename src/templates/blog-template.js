@@ -76,16 +76,16 @@ const Blog = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query getPost($slug: String!) {
-    post: contentfulPost(slug: { eq: $slug }) {
-      title
-      published(formatString: "MMMM Do, YYYY")
-      text {
-        json
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query getPost($slug: String!) {
+//     post: contentfulPost(slug: { eq: $slug }) {
+//       title
+//       published(formatString: "MMMM Do, YYYY")
+//       text {
+//         json
+//       }
+//     }
+//   }
+// `
 
 export default Blog
