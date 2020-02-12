@@ -6,11 +6,11 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import PropTypes from "prop-types"
 
 const Tour = ({ tour }) => {
-  const { name, price, country, days, slug, images } = tour
-  let mainImage = images[0].fluid
+  // const { name, price, country, days, slug, images } = tour
+  // let mainImage = images[0].fluid
   return (
     <article className={styles.tour}>
-      <div className={styles.imgContainer}>
+      {/* <div className={styles.imgContainer}>
         <Image fluid={mainImage} className={styles.img} alt="single tour" />
         <AniLink fade className={styles.link} to={`/tours/${slug}`}>
           details
@@ -28,7 +28,7 @@ const Tour = ({ tour }) => {
             <h6>from ${price}</h6>
           </div>
         </div>
-      </div>
+      </div> */}
     </article>
   )
 }

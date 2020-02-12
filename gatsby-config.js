@@ -1,7 +1,5 @@
 /**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ * Configure o site com este arquivo.
  */
 
 const path = require(`path`)
@@ -11,13 +9,12 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "BackRoads",
-    description:
-      "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
-    author: "@johndoe",
+    title: "Ponto G++",
+    description: "Ponto de encontro de velhos e novo Geeks",
+    author: "J.A. Gaeta Mendes",
     twitterUsername: "@JaGaeta",
-    image: "/defaultBcg.jpeg",
-    siteUrl: "https://my-gatsby-backroads-project.netlify.com",
+    image: "/siteImage.jpg",
+    siteUrl: "https://pontogpp.com.br",
   },
   plugins: [
     {
@@ -38,8 +35,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://my-gatsby-backroads-project.netlify.com",
-        sitemap: "https://my-gatsby-backroads-project.netlify.com/sitemap.xml",
+        host: "https://pontogpp.com.br",
+        sitemap: "https://pontogpp.com.br/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

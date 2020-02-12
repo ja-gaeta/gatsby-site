@@ -10,9 +10,9 @@ const error = () => {
     <Layout>
       <SEO title="Error" />
       <header className={styles.error}>
-        <Banner title="oops it's a dead end">
+        <Banner title="oops fim da linha">
           <AniLink fade to="/" className="btn-white">
-            back to home page
+            voltar ao início
           </AniLink>
         </Banner>
       </header>

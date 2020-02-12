@@ -5,7 +5,7 @@ export default [
   },
   {
     path: "/tours",
-    text: "crônicas",
+    text: "cursos",
   },
   {
     path: "/blog",
@@ -13,7 +13,7 @@ export default [
   },
   {
     path: "/blogs",
-    text: "vídeos",
+    text: "crônicas",
   },
   {
     path: "/contact",

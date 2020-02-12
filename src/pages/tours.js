@@ -9,22 +9,23 @@ export default class tours extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Tours" />
-        <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} />
-        <Tours />
+        <SEO title="Cursos" />
+        {/* <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} />
+        <Tours /> */}
+        Cursos
       </Layout>
     )
   }
 }
 
-export const query = graphql`
-  query {
-    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+//       childImageSharp {
+//         fluid(quality: 90, maxWidth: 4160) {
+//           ...GatsbyImageSharpFluid_withWebp
+//         }
+//       }
+//     }
+//   }
+// `

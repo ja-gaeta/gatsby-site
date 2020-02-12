@@ -4,36 +4,36 @@ import Title from "../Title"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from "../../css/blog.module.css"
 
-const getPosts = graphql`
-  query {
-    posts: allContentfulPost(sort: { fields: published, order: DESC }) {
-      edges {
-        node {
-          published(formatString: "MMMM Do, YYYY")
-          title
-          slug
-          _id: contentful_id
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// const getPosts = graphql`
+//   query {
+//     posts: allContentfulPost(sort: { fields: published, order: DESC }) {
+//       edges {
+//         node {
+//           published(formatString: "MMMM Do, YYYY")
+//           title
+//           slug
+//           _id: contentful_id
+//           image {
+//             fluid {
+//               ...GatsbyContentfulFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 const BlogList = () => {
-  const { posts } = useStaticQuery(getPosts)
+  // const { posts } = useStaticQuery(getPosts)
   return (
     <section className={styles.blog}>
       <Title title="our" subtitle="blogs" />
-      <div className={styles.center}>
+      {/* <div className={styles.center}>
         {posts.edges.map(({ node }) => {
           return <BlogCard key={node._id} blog={node} />
         })}
-      </div>
+      </div> */}
     </section>
   )
 }
